@@ -96,6 +96,17 @@ where
         }
     }
 
+    /// Retrieves the primitive value as a sequence of unsigned bytes.
+    pub fn as_u16(&self) -> Result<&[u16], CastValueError> {
+        match self {
+            Value::Primitive(PrimitiveValue::U16(v)) => Ok(&v),
+            _ => Err(CastValueError {
+                requested: "u16",
+                got: self.value_type(),
+            }),
+        }
+    }
+
     /// Retrieves the primitive value as a sequence of signed 32-bit integers.
     pub fn as_i32(&self) -> Result<&[i32], CastValueError> {
         match self {

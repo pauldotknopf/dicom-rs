@@ -1,0 +1,22 @@
+[package]
+name = "dicom-ul"
+version = "0.1.0"
+authors = ["Eduardo Pinho <enet4mikeenet@gmail.com>", "Paul Knopf <pauldotknopf@gmail.com>"]
+description = "Types and methods for interacting with the DICOM Upper Layer Protocol"
+edition = "2018"
+license = "MIT/Apache-2.0"
+repository = "https://github.com/Enet4/dicom-rs"
+
+[dependencies]
+quick-error = "1.2.2"
+byteordered = "0.4.0"
+dicom-core = { path = "../core", version = "0.1.0" }
+dicom-object = { path = "../object", version = "0.1.0" }
+dicom-transfer-syntax-registry = { path = "../transfer-syntax-registry", version = "0.1.0" }
+dicom-parser = { path = "../parser", version = "0.1.0" }
+dicom-encoding = { path = "../encoding", version = "0.1.0" }
+
+[dev-dependencies]
+matches = "0.1.8"
+mockstream = "0.0.3"
+mockall = "0.5.0"

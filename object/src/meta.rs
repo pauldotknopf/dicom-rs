@@ -446,13 +446,13 @@ mod tests {
         assert_eq!(table.information_version, [0u8, 1u8]);
         assert_eq!(
             table.media_storage_sop_class_uid,
-            "1.2.840.10008.5.1.4.1.1.1\0"
+            "1.2.840.10008.5.1.4.1.1.1"
         );
         assert_eq!(
             table.media_storage_sop_instance_uid,
-            "1.2.3.4.5.12345678.1234567890.1234567.123456789.1234567\0"
+            "1.2.3.4.5.12345678.1234567890.1234567.123456789.1234567"
         );
-        assert_eq!(table.transfer_syntax, "1.2.840.10008.1.2.1\0");
+        assert_eq!(table.transfer_syntax, "1.2.840.10008.1.2.1");
         assert_eq!(table.implementation_class_uid, "1.2.345.6.7890.1.234");
         assert_eq!(
             table.implementation_version_name,
@@ -464,5 +464,4 @@ mod tests {
         assert_eq!(table.private_information_creator_uid, None);
         assert_eq!(table.private_information, None);
     }
-
 }

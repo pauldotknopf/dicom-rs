@@ -244,7 +244,7 @@ where
     // private methods
 
     /// Build an object by consuming a data set parser.
-    fn build_object<'s, S: 's, P>(
+    pub fn build_object<'s, S: 's, P>(
         dataset: &mut DataSetReader<S, P, D>,
         dict: D,
         in_item: bool,
